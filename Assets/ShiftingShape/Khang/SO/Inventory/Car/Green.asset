@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b382dd25c4515640aaa9343557475d3, type: 3}
+  m_Name: Green
+  m_EditorClassIdentifier: 
+  itemName: Green
+  sprite: {fileID: 0}
+  price: 100
+  itemObj: {fileID: 8592126259980125378, guid: d7fce5afc84a12a40a375a82ec7d4de7, type: 3}
+  isBought: 0
