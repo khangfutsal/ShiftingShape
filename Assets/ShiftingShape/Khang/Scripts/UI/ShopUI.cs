@@ -59,9 +59,12 @@ namespace Khang
         public void SetDefaultShop()
         {
             var itemGroups = DataManager.Ins.ItemsData;
-            ShowTab(itemGroups.itemGroups[0].itemType.ToString());
-            ShowItem(itemGroups.itemGroups[0].itemType.ToString(), itemGroups.itemGroups[0].items[0].itemName);
-            
+            var defaultItemType = itemGroups.itemGroups[0].itemType.ToString();
+            var defaultItem = itemGroups.itemGroups[0].items.Find(i => i.FirstItem == true);
+
+            ShowTab(defaultItemType);
+            ShowItem(defaultItemType, defaultItem.itemName);
+
         }
 
 
@@ -80,7 +83,7 @@ namespace Khang
                 ItemTab itemTab = tabObj.GetComponent<ItemTab>();
 
                 string itemTypeStr = itemGroups.itemGroups[i].itemType.ToString();
-                string nameTypeStr = itemGroups.itemGroups[i].items[0].itemName; ;
+                string nameTypeStr = itemGroups.itemGroups[i].items.Find(i => i.itemName.Contains("Normal")).itemName;
 
                 var localIndex = i; // ⭐ Fix ở đây
 
@@ -121,11 +124,13 @@ namespace Khang
                 itemsParentObj.Add(itemParentObj);
 
 
-                for (int j = 1; j < itemGroups.itemGroups[i].items.Count; j++)
+                for (int j = 0; j < itemGroups.itemGroups[i].items.Count; j++)
                 {
                     var itemType = itemGroups.itemGroups[i].itemType;
                     var itemName = itemGroups.itemGroups[i].items[j].itemName;
                     var isItemBought = itemGroups.itemGroups[i].items[j].isBought;
+
+                    if (itemName.Contains("Normal")) continue;
 
                     GameObject itemObj = Instantiate(itemPrefab, itemParentObj.transform.Find("Viewport").Find("Content"));
                     itemObj.name = itemGroups.itemGroups[i].items[j].itemName;

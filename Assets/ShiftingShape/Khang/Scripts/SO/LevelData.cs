@@ -13,6 +13,7 @@ namespace Khang
         public int rewardForWinnerAfterAds;
 
         public int rewardForLoser;
+        public bool isFinishedLevel;
     }
 
 }

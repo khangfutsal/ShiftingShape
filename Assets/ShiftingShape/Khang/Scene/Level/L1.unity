@@ -8208,6 +8208,61 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8672316255602734662, guid: d66edea08dbfbdf46b4bffe77a259dc2,
+        type: 3}
+      propertyPath: inventory.UserOwn.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8672316255602734662, guid: d66edea08dbfbdf46b4bffe77a259dc2,
+        type: 3}
+      propertyPath: inventory.UserOwn.Array.data[2]
+      value: Car_Normal
+      objectReference: {fileID: 0}
+    - target: {fileID: 8672316255602734662, guid: d66edea08dbfbdf46b4bffe77a259dc2,
+        type: 3}
+      propertyPath: inventory.UserOwn.Array.data[3]
+      value: Boat_Normal
+      objectReference: {fileID: 0}
+    - target: {fileID: 8672316255602734662, guid: d66edea08dbfbdf46b4bffe77a259dc2,
+        type: 3}
+      propertyPath: inventory.UserOwn.Array.data[4]
+      value: Heli_Normal
+      objectReference: {fileID: 0}
+    - target: {fileID: 8672316255602734662, guid: d66edea08dbfbdf46b4bffe77a259dc2,
+        type: 3}
+      propertyPath: inventory.UserOwn.Array.data[5]
+      value: Glider_Normal
+      objectReference: {fileID: 0}
+    - target: {fileID: 8672316255602734662, guid: d66edea08dbfbdf46b4bffe77a259dc2,
+        type: 3}
+      propertyPath: inventory.UserEquipped.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8672316255602734662, guid: d66edea08dbfbdf46b4bffe77a259dc2,
+        type: 3}
+      propertyPath: inventory.UserEquipped.Array.data[0]
+      value: Human_Normal
+      objectReference: {fileID: 0}
+    - target: {fileID: 8672316255602734662, guid: d66edea08dbfbdf46b4bffe77a259dc2,
+        type: 3}
+      propertyPath: inventory.UserEquipped.Array.data[2]
+      value: Car_Normal
+      objectReference: {fileID: 0}
+    - target: {fileID: 8672316255602734662, guid: d66edea08dbfbdf46b4bffe77a259dc2,
+        type: 3}
+      propertyPath: inventory.UserEquipped.Array.data[3]
+      value: Boat_Normal
+      objectReference: {fileID: 0}
+    - target: {fileID: 8672316255602734662, guid: d66edea08dbfbdf46b4bffe77a259dc2,
+        type: 3}
+      propertyPath: inventory.UserEquipped.Array.data[4]
+      value: Heli_Normal
+      objectReference: {fileID: 0}
+    - target: {fileID: 8672316255602734662, guid: d66edea08dbfbdf46b4bffe77a259dc2,
+        type: 3}
+      propertyPath: inventory.UserEquipped.Array.data[5]
+      value: Glider_Normal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8601,6 +8656,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LevelManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7476092159122649113, guid: 282608d80b7a2a54c9b78b53c241a601,
+        type: 3}
+      propertyPath: LevelProcesses.Array.size
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

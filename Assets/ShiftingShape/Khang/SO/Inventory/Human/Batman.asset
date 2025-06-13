@@ -17,3 +17,4 @@ MonoBehaviour:
   price: 100
   itemObj: {fileID: 7592750521641194508, guid: f5876325495025e4983768519d129406, type: 3}
   isBought: 0
+  FirstItem: 0

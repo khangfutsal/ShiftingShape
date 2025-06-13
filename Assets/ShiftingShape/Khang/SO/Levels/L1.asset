@@ -17,3 +17,4 @@ MonoBehaviour:
   rewardForWinner: 500
   rewardForWinnerAfterAds: 1500
   rewardForLoser: 100
+  isFinishedLevel: 1

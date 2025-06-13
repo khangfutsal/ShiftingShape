@@ -48,6 +48,7 @@ namespace Khang
 
             for (int i = 0; i < itemsGroup.Count; i++)
             {
+
                 var itemGroup = itemsGroup[i];
                 string itemTypeStr = itemGroup.itemType.ToString();
 
@@ -56,9 +57,10 @@ namespace Khang
                     var item = itemGroup.items[j];
                     item.isBought = false;
 
-                    if (j == 0)
+                    if (item.itemName.Contains("Normal"))
                     {
                         string nameType = item.itemName;
+                        item.FirstItem = true;
                         AddUserOwn(itemTypeStr, nameType);
                         AddUserEquip(itemTypeStr, nameType);
                     }

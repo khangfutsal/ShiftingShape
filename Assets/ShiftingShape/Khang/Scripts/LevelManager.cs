@@ -10,10 +10,9 @@ namespace Khang
         public LevelData CurrentLevel;
         public List<ShapeData> CurShapesInLevel = new List<ShapeData>();
 
-
         protected override void Awake()
         {
-            Initialize();
+
         }
 
         void Start()
@@ -21,10 +20,8 @@ namespace Khang
 
         }
 
-
-        public void Initialize()
+        public void InitializeGameplayLevel(int level)
         {
-
             string currentSceneName = SceneManager.GetActiveScene().name;
             Debug.Log(currentSceneName + " " + DataManager.Ins.LevelsData[1]);
 

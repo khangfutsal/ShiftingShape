@@ -11,6 +11,7 @@ namespace Khang
         public int price;
         public GameObject itemObj;
         public bool isBought;
+        public bool FirstItem;
     }
 
 }

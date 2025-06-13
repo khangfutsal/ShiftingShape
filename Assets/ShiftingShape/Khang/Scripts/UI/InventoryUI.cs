@@ -32,13 +32,13 @@ namespace Khang
         #region Unity Functions
         private void Awake()
         {
-            btnUsing = transform.Find("BG").Find("Shop").Find("BtnUsing").GetComponent<Button>();
+            btnUsing = transform.Find("BG").Find("Inventory").Find("BtnUsing").GetComponent<Button>();
             this.gameObject.SetActive(false);
         }
 
         private void Start()
         {
-            btnUsing.onClick.AddListener(ButtonUsingItem);
+            //btnUsing.onClick.AddListener(ButtonUsingItem);
         }
         #endregion
 
@@ -70,11 +70,11 @@ namespace Khang
         public void SetDefaultInventory()
         {
             var itemGroups = DataManager.Ins.ItemsData;
-            ShowTab(itemGroups.itemGroups[0].itemType.ToString());
+            var defaultItemType = itemGroups.itemGroups[0].itemType.ToString();
 
 
-
-            ShowItemInTab(itemGroups.itemGroups[0].itemType.ToString());
+            ShowTab(defaultItemType);
+            ShowItemInTab(defaultItemType);
             //RefreshEquippedItems();
 
         }
@@ -180,7 +180,7 @@ namespace Khang
 
         public void CheckStatusUsing(bool _value)
         {
-            btnUsing.gameObject.SetActive(!_value);
+            btnUsing.gameObject.SetActive(!_value); 
         }
 
         public void ButtonUsingItem()
