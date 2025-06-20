@@ -8,7 +8,7 @@ namespace Khang
     public class ItemTab : MonoBehaviour
     {
         [SerializeField] private Image imgItemTab;
-        [SerializeField] private TextMeshProUGUI txtItemTab;
+        [SerializeField] private Image imgItemTabFocus;
         public Button btnItemTab;
 
         [SerializeField] private ItemType itemType;
@@ -16,9 +16,6 @@ namespace Khang
         private void Awake()
         {
             btnItemTab = GetComponent<Button>();
-
-            imgItemTab = transform.Find("Horizontal").GetComponentInChildren<Image>();
-            txtItemTab = transform.Find("Horizontal").GetComponentInChildren<TextMeshProUGUI>();
         }
 
         public void SetData(ItemType itemType)
@@ -26,17 +23,27 @@ namespace Khang
             this.itemType = itemType;
         }
 
-        public void ConfigItem(Sprite _spriteItemTab, string _nameItemTab)
+        public void ConfigItem(Sprite _spriteItemTab, Sprite _spriteItemTabFocus, string _nameItemTab)
         {
             imgItemTab.sprite = _spriteItemTab;
-            txtItemTab.text = _nameItemTab;
+            imgItemTabFocus.sprite = _spriteItemTabFocus;
         }
 
-        public void SetActiveTab(bool active)
+        public void UpdateTabVisual(bool isActive)
         {
-            imgItemTab.color = active ? Color.white : Color.red;
-            ItemDisplayHolder.Ins.SpawnItem(itemType);
+            imgItemTab.gameObject.SetActive(!isActive);
+            imgItemTabFocus.gameObject.SetActive(isActive);
+        }
 
+        public void SetActiveTab(bool isActive)
+        {
+            UpdateTabVisual(isActive);
+            ItemDisplayHolder.Ins.SpawnItem(itemType);
+        }
+
+        private void OnDisable()
+        {
+            SetActiveTab(false);
         }
 
 

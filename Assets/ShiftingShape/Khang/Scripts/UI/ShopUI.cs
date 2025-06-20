@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 namespace Khang
@@ -87,7 +88,7 @@ namespace Khang
 
                 var localIndex = i; // ⭐ Fix ở đây
 
-                itemTab.ConfigItem(itemGroups.itemGroups[i].spriteItemGroup, itemTypeStr);
+                itemTab.ConfigItem(itemGroups.itemGroups[i].spriteItemGroup, itemGroups.itemGroups[i].spriteItemFocus, itemTypeStr);
                 itemTab.SetData(itemGroups.itemGroups[i].itemType);
                 itemTab.btnItemTab.onClick.AddListener(() =>
                 {
@@ -138,13 +139,10 @@ namespace Khang
                     ItemShop item = itemObj.GetComponent<ItemShop>();
                     item.ConfigItemData((ShapeItemData)itemGroups.itemGroups[i].items[j], itemType);
 
-                    // Tạo biến local tránh closure bug
-
-
-
                     item.btnIconItem.onClick.AddListener(() =>
                     {
                         item.ButtonIconItem(itemType, itemName);
+                        SetActiveItem(item);
                         ItemDisplay itemDislay = ItemDisplayHolder.Ins.CurrentItemDisplay;
                         if (itemDislay == null) return;
 
@@ -159,20 +157,38 @@ namespace Khang
                     });
 
                     item.SetStatusItem(isItemBought);
-
-                    items.Add(item);
                 }
+            }
+        }
+
+        public void SetActiveItem(ItemShop item = null)
+        {
+            bool isSameItem;
+            foreach (var _item in items)
+            {
+                isSameItem = _item == item;
+                _item.SetActiveItem(isSameItem);
             }
         }
 
         public void ShowItem(string nameTab, string nameItem)
         {
+            bool isActive;
+            items.Clear();
+
             foreach (Transform child in itemTf)
             {
-                bool isActive = child.name.Contains(nameTab);
+                isActive = false;
+                if (child.name.Contains(nameTab))
+                {
+                    isActive = true;
+                    Transform content = child.transform.Find("Viewport/Content");
+                    items = content.GetComponentsInChildren<ItemShop>(true).ToList();
+                    SetActiveItem();
+
+                }
                 child.gameObject.SetActive(isActive);
             }
-
 
             ItemType itemType;
             if (System.Enum.TryParse(nameTab, out itemType))

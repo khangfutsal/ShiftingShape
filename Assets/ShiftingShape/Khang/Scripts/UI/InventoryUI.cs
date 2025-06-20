@@ -98,7 +98,7 @@ namespace Khang
                 string itemTypeStr = itemGroups.itemGroups[i].itemType.ToString();
                 var localIndex = i; // ⭐ Fix ở đây
 
-                itemTab.ConfigItem(itemGroups.itemGroups[i].spriteItemGroup, itemTypeStr);
+                itemTab.ConfigItem(itemGroups.itemGroups[i].spriteItemGroup, itemGroups.itemGroups[i].spriteItemFocus, itemTypeStr);
                 itemTab.SetData(itemGroups.itemGroups[i].itemType);
                 itemTab.btnItemTab.onClick.AddListener(() =>
                 {

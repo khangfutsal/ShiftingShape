@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Items
   m_EditorClassIdentifier: 
   itemGroups:
-  - spriteItemGroup: {fileID: 0}
+  - spriteItemGroup: {fileID: 21300000, guid: 456c79577d9d98d4dac6987ab18008a5, type: 3}
+    spriteItemFocus: {fileID: 21300000, guid: e176823e01f5d4347ba478f29c5c8af0, type: 3}
     itemType: 1
     items:
     - {fileID: 11400000, guid: 18b1e17f1d66c9540ae44788d70a22e3, type: 2}
@@ -26,7 +27,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 6f41e210b5588764683135769090a82c, type: 2}
     - {fileID: 11400000, guid: 6b2b34b595005594485d9c135ae41e26, type: 2}
     - {fileID: 11400000, guid: cf3128f0063b40a439b79a00bcaedff4, type: 2}
-  - spriteItemGroup: {fileID: 0}
+  - spriteItemGroup: {fileID: 21300000, guid: d33cf3eaca3b77144933e18b91c10d66, type: 3}
+    spriteItemFocus: {fileID: 21300000, guid: 5d11e602df6b621408d4b0a842517d0e, type: 3}
     itemType: 2
     items:
     - {fileID: 11400000, guid: a245f6d220c4f434aa5e24edd06baba3, type: 2}
@@ -39,20 +41,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 34f696e6a58282e4f9e1a261ddae9f30, type: 2}
     - {fileID: 11400000, guid: 984c5a9de01d9174c9e30b11f76b416e, type: 2}
     - {fileID: 11400000, guid: ef2968c5d02ca014893c5fd18fb5daba, type: 2}
-  - spriteItemGroup: {fileID: 0}
-    itemType: 3
-    items:
-    - {fileID: 11400000, guid: da29b9af467355a4e995285a08528b34, type: 2}
-    - {fileID: 11400000, guid: 963c8341534fbad408cc84d728b48913, type: 2}
-    - {fileID: 11400000, guid: 3b878e47114359b4ab50bd0d52590e32, type: 2}
-    - {fileID: 11400000, guid: 02d273550fc9787438c2d44f2791ff6d, type: 2}
-    - {fileID: 11400000, guid: 20e4c437e079a5d43b0bdce29227eb7a, type: 2}
-    - {fileID: 11400000, guid: 0ef9b420f02c0624f80ed780cca7a32d, type: 2}
-    - {fileID: 11400000, guid: 74db538a71f309a4284ee22f0f48de20, type: 2}
-    - {fileID: 11400000, guid: fad74141098ff4a4e9e081840e655d49, type: 2}
-    - {fileID: 11400000, guid: 8ad2e523b01d075429e76a06e477e83e, type: 2}
-    - {fileID: 11400000, guid: b70b199afbde7924695daf642989759a, type: 2}
-  - spriteItemGroup: {fileID: 0}
+  - spriteItemGroup: {fileID: 21300000, guid: 46e3e36f47d78604f97176484078d82e, type: 3}
+    spriteItemFocus: {fileID: 21300000, guid: a75a6d1d1f90fed4281cc792f770f25b, type: 3}
     itemType: 4
     items:
     - {fileID: 11400000, guid: 1902fc2e06be64846b36ba7a80883f58, type: 2}
@@ -65,7 +55,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 3f14aa175d2c9f64a90b6c19081ff7c7, type: 2}
     - {fileID: 11400000, guid: b5587cc1df0b08a4180b8dfc38a6c1de, type: 2}
     - {fileID: 11400000, guid: c186d2cd70c7c5b4aaf8d9df182a6cbf, type: 2}
-  - spriteItemGroup: {fileID: 0}
+  - spriteItemGroup: {fileID: 21300000, guid: 8ffe08e1c6aed85469f5e7bfdfc49f03, type: 3}
+    spriteItemFocus: {fileID: 21300000, guid: a2da5d761e8550e448007b3d2889289d, type: 3}
     itemType: 5
     items:
     - {fileID: 11400000, guid: c080097cda28b3b42a3bac5ee9bb6a70, type: 2}
@@ -78,7 +69,22 @@ MonoBehaviour:
     - {fileID: 11400000, guid: d24f3a97ff29a834d862a66d3839a1ac, type: 2}
     - {fileID: 11400000, guid: edb82b8814193d940b1683223c423a1b, type: 2}
     - {fileID: 11400000, guid: a429afc7ef96ce847a3be41cdc7d47d0, type: 2}
-  - spriteItemGroup: {fileID: 0}
+  - spriteItemGroup: {fileID: 21300000, guid: 057c7e5bf4c862c4f94bb7b975d6d333, type: 3}
+    spriteItemFocus: {fileID: 21300000, guid: 5468244b2ed711940bb0496b09bf9f60, type: 3}
+    itemType: 3
+    items:
+    - {fileID: 11400000, guid: da29b9af467355a4e995285a08528b34, type: 2}
+    - {fileID: 11400000, guid: 963c8341534fbad408cc84d728b48913, type: 2}
+    - {fileID: 11400000, guid: 3b878e47114359b4ab50bd0d52590e32, type: 2}
+    - {fileID: 11400000, guid: 02d273550fc9787438c2d44f2791ff6d, type: 2}
+    - {fileID: 11400000, guid: 20e4c437e079a5d43b0bdce29227eb7a, type: 2}
+    - {fileID: 11400000, guid: 0ef9b420f02c0624f80ed780cca7a32d, type: 2}
+    - {fileID: 11400000, guid: 74db538a71f309a4284ee22f0f48de20, type: 2}
+    - {fileID: 11400000, guid: fad74141098ff4a4e9e081840e655d49, type: 2}
+    - {fileID: 11400000, guid: 8ad2e523b01d075429e76a06e477e83e, type: 2}
+    - {fileID: 11400000, guid: b70b199afbde7924695daf642989759a, type: 2}
+  - spriteItemGroup: {fileID: 21300000, guid: 1796abd8f85c8084ba3bbc1abc4e9509, type: 3}
+    spriteItemFocus: {fileID: 21300000, guid: 5c825d08abf4f414bb82f2912c02d747, type: 3}
     itemType: 6
     items:
     - {fileID: 11400000, guid: 0c6af9272f5cb37419eb685ec1bea54c, type: 2}

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -12,6 +13,7 @@ namespace Khang
 
         public Button btnIconItem;
         [SerializeField] private Image imgIconItem;
+        [SerializeField] private GameObject imgFocus;
 
         public Button btnBuyItem;
         [SerializeField] private TextMeshProUGUI txtBuyItem;
@@ -50,5 +52,9 @@ namespace Khang
             btnBuyItem.interactable = active ? false : true;
         }
 
+        public void SetActiveItem(bool isSelected)
+        {
+            imgFocus.SetActive(isSelected);
+        }
     }
 }

@@ -8,6 +8,7 @@ namespace Khang
     public class ItemGroup
     {
         public Sprite spriteItemGroup;
+        public Sprite spriteItemFocus;
         public ItemType itemType;
         public List<ItemData> items;
     }
